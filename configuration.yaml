@@ -1,0 +1,10 @@
+  - platform: mqtt
+    unique_id: keurig_1
+    name: "Keurig"
+    command_topic: "wemos/esp-84:cc:a8:b0:1b:f2/in"
+    payload_on: "{\"power\":\"on\"}"
+    payload_off: "{\"power\":\"off\"}"
+    state_topic: "wemos/esp-84:cc:a8:b0:1b:f2/out"
+    state_on: "on"
+    state_off: "off"
+    value_template: '{{value_json.power}}'
